@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Sample Leaflet Map - Watercolor</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 	<link rel="shortcut icon" type="image/png" href="images/star.png"/>
+
+  <link rel="stylesheet" href="leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="js/leaflet.js"></script>
+  <script src="js/leaflet-providers.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+</head>
+<body>
+
+<div id="map"></div>
+
+</div>
+
+<script>
+
+// map variable, set coordinates and zoom level
+	var mymap = L.map('map', {
+		minZoom: 4,
+		zoomSnap: 0.25 
+	});
+  mymap.setView([39.069150, -95.665372], 4.5);
+
+  var southWest = L.latLng(0,-180),
+    northEast = L.latLng(80, -50);
+  var bounds = L.latLngBounds(southWest, northEast);
+
+  mymap.setMaxBounds(bounds);
+
+ // add tile layer 
+	
+	L.tileLayer.provider('Stamen.Watercolor', {
+		maxZoom: 10,
+		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(mymap);
+
+// Icon
+
+ var testIcon = L.icon({
+    //set path to icon
+  iconUrl: 'images/default-icon.png',
+    // size of the icon
+  iconSize: [75, 75],
+    // anchor popup
+  popupAnchor:  [9, -12]
+  });
+
+ // Circle
+
+ var circle = L.circle([36.0697492, -79.8121722], {
+    color: '#00A86B',
+    fillColor: '#00A86B',
+    fillOpacity: 0.5,
+    radius: 160934.5 //100 miles converted to meters
+}).addTo(mymap);
+
+ var polygon = L.polygon([
+    [40.212438, -74.054017], //Maggie
+    [32.22167, -110.92639], //Jo
+    [32.3913, -84.8229], //Lynda
+    [33.81778, -79.44833] //Erin
+]).addTo(mymap);
+
+// Beth Bernhardt
+
+var bethPop = '<p>Beth Bernhardt is from <a href="https://en.wikipedia.org/wiki/Lincolnton,_North_Carolina">Lincolnton, NC</a></p>' ;
+
+  var beth = L.marker([35.47361, -81.25444], {icon: testIcon}).bindPopup(bethPop).addTo(mymap);
+
+// Richard Cox
+
+var richardPop = '<p>Richard Cox is from <a href="https://en.wikipedia.org/wiki/Thomasville,_North_Carolina">Thomasville, NC</a></p>' ;
+
+  var richard = L.marker([35.88583, -80.07722], {icon: testIcon}).bindPopup(richardPop).addTo(mymap);
+
+// Maggie Murphy
+
+var maggiePop = '<p>Maggie Murphy is from <a href="https://en.wikipedia.org/wiki/Neptune_Township,_New_Jersey">Neptune, NJ</a></p>' ;
+
+  var maggie = L.marker([40.212438, -74.054017], {icon: testIcon}).bindPopup(maggiePop).addTo(mymap);
+
+// Anna Craft
+
+var annaPop = '<p>Anna Craft is from <a href="https://en.wikipedia.org/wiki/Roanoke,_Virginia">Roanoke, VA</a></p>' ;
+
+  var anna = L.marker([37.27083, -79.94167], {icon: testIcon}).bindPopup(annaPop).addTo(mymap);
+
+// Lynda Kellam
+
+var lyndaPop = '<p>Lynda Kellam is from <a href="https://en.wikipedia.org/wiki/Fort_Benning,_Georgia">Fort Benning, GA</a></p>' ;
+
+  var lynda = L.marker([32.3913, -84.8229], {icon: testIcon}).bindPopup(lyndaPop).addTo(mymap);
+
+// Erin Lawrimore
+
+var erinPop = '<p>Erin Lawrimore is from <a href="https://en.wikipedia.org/wiki/Johnsonville,_South_Carolina">Johnsonville, SC</a></p>' ;
+
+  var erin = L.marker([33.81778, -79.44833], {icon: testIcon}).bindPopup(erinPop).addTo(mymap);
+
+// Jo Klein
+
+var joPop = '<p>Jo Klein is from <a href="https://en.wikipedia.org/wiki/Tucson,_Arizona">Tucson, AZ</a></p>' ;
+
+  var jo = L.marker([32.22167, -110.92639], {icon: testIcon}).bindPopup(joPop).addTo(mymap);
+
+</script>
+
+
+
+</body>
+</html>

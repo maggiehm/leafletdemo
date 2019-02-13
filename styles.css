@@ -1,0 +1,209 @@
+html {
+  height: 100%;
+}
+
+
+/* 
+font-family: 'Arvo', serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Vollkorn', serif;
+font-family: 'Barlow', sans-serif;
+font-family: 'Yantramanav', sans-serif;
+font-family: 'Zilla Slab', serif;
+font-family: 'Sanchez', serif;
+font-family: 'Overpass', sans-serif;
+*/
+
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+p {
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #354731;
+    text-align: center;
+}
+
+p a {
+    color: #871B17;
+}
+
+p a:hover {
+    color: #DD6031;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+}
+
+
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #FFF;
+    color: #354731;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #354731;
+    color: #FFF;
+}
+
+
+#welcome {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.15em;
+    font-weight: 800;
+    color: #354731;
+}
+
+.page-scroll {
+    font-size: 1.5em;
+}
+
+#button {
+    background-color: #354731;
+    outline:0px;
+}
+
+.welcome-section {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    text-align: center;
+    background: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+}
+
+.exhibitmap-section {
+    height: 150%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    margin-bottom: auto;
+    text-align: center;
+    background: #B6D094;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+}
+
+#map {
+  height: 50vw;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.exhibitmap-section p {
+    font-size: 12px;
+}
+
+
+.america-section {
+    height: 150%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    text-align: center;
+    background: #fff;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-section {
+    padding-top: 10px;
+    background: #fff;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-section img {
+    min-width: 100px;
+    max-width: 60%;
+}
+
+.footer-section p {
+    text-align: right; 
+    font-size: 12px;
+}
+
+#footer-text {
+    padding-right: 10%;
+}
+
+
+.lithographs-section {
+    height: 100%;
+    padding-top: 75px;
+    padding-bottom: 50px;
+    text-align: center;
+    background: #B6D094;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.popover {
+    min-width: 90%;
+    font-family: 'Quicksand', sans-serif;
+    color: #354731;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #354731;
+	background-color: #DD6031;
+    font-family: 'Quicksand', sans-serif;
+}
+.navbar-default {
+    background-color: #EABE7C;
+    border-color: #e7e7e7;
+    font-family: 'Quicksand', sans-serif;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #354731
+}
+
+figure.zoom img:hover {
+    opacity: 0;
+  }
+
+  img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+  }
+
+  background-position: 50% 50%;
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+
+
+
